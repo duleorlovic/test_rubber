@@ -1,0 +1,49 @@
+---
+- !ruby/object:Rubber::Configuration::InstanceItem
+  name: web01
+  domain: foo.com
+  roles:
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: app
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: passenger
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: apache
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: db
+    options:
+      primary: true
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: postgresql
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: postgresql_master
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: collectd
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: monit
+    options: {}
+  instance_id: i-0514afed14b20f391
+  image_type: t2.micro
+  image_id: ami-04169656fea786776
+  security_groups:
+  - default
+  - web
+  zone: us-east-1a
+  network: 
+  gateway: 
+  external_host: ec2-34-229-144-213.compute-1.amazonaws.com
+  external_ip: 34.229.144.213
+  internal_host: ip-172-31-24-135.ec2.internal
+  internal_ip: 172.31.24.135
+  provider: aws
+  platform: linux
+  root_device_type: ebs
+- volumes: {}
+  static_ips: {}
+  vpc: {}
